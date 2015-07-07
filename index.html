@@ -1,149 +1,144 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <meta name="description" content="">
+        <meta name="author" content="">
 
-    <title>Starter Template for Bootstrap</title>
+        <title>Starter Template for Bootstrap</title>
 
-    <!-- Latest compiled and minified CSS -->
+        <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
-    <style type="text/css">
-    .starter-template {
-      padding-top: 60px;
-    }
+        <style type="text/css">
+        .starter-template {
+            padding-top: 60px;
+        }
 
-    </style>
+        </style>
 
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+            <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
 
-  <body>
+    <body>
 
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Project name</a>
-        </div>
-        <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Project name</a>
+                </div>
+                <div id="navbar" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div>
+        </nav>
 
-    <div class="container">
+        <div class="container">
 
-      <div class="starter-template">
-        <h1>Docs for great justice</h1>
-        <ul class="list-group">
-          <li class="list-group-item" id="list1">Cras justo odio
-          <ul class="list-group hidden" id="sublist1">
-            <li class="list-group-item">Yo</li>
-            <li class="list-group-item">What</li>
-            <li class="list-group-item">Up</li>
-            <li class="list-group-item">Dawg</li>
-            <li class="list-group-item">!</li>
-          </ul>
-          </li>
-          <li class="list-group-item" id="list2">Cras justo odio
-          <ul class="list-group hidden" id="sublist2">
-            <li class="list-group-item">Yo</li>
-            <li class="list-group-item">What</li>
-            <li class="list-group-item">Up</li>
-            <li class="list-group-item">Dawg</li>
-            <li class="list-group-item">!</li>
-          </ul>
-          </li>
-          <li class="list-group-item" id="list3">Cras justo odio
-          <ul class="list-group hidden" id="sublist3">
-            <li class="list-group-item">Yo</li>
-            <li class="list-group-item">What</li>
-            <li class="list-group-item">Up</li>
-            <li class="list-group-item">Dawg</li>
-            <li class="list-group-item">!</li>
-          </ul>
-          </li>
-          <li class="list-group-item" id="list4">Cras justo odio
-          <ul class="list-group hidden" id="sublist4">
-            <li class="list-group-item">Yo</li>
-            <li class="list-group-item">What</li>
-            <li class="list-group-item">Up</li>
-            <li class="list-group-item">Dawg</li>
-            <li class="list-group-item">!</li>
-          </ul>
-          </li>
-        </ul>
-      </div>
+            <div class="starter-template">
+                <h1>Docs for great justice</h1>
+            <form method="POST" action="http://google.com/">
+            <input name="q" type="text">
+            </form>
 
-      <ul class="list-group" id="resources">
-      </ul>
+            <ul class="list-group" id="resources">
+            {% for type in resources %}
+            <li>{{type.title}}
+                <ul>
+                {% for subtype in type %}
+                    <li>subtype.title
+                        <ul class="hidden">
+                    {% for resource in subtype %}
+                            <li><a href="">{{resource.title}}</a></li>
+                    {% endfor %}
+                        </ul>
+                    </li>
+                {% endfor %}
+                </ul>
+            </li>
+            {% endfor %}
+            </ul>
 
 
 
-    </div><!-- /.container -->
+        </div><!-- /.container -->
 
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
-    <script type="text/javascript">
+        <script type="text/javascript">
 
-    var resources = [
-      {title: "JavaScript", subTypes : [
-        {"title" : "DOM Manipulation", "resources": [
-            {"title" : "jQuery", "link": "http://api.jquery.com/"},
-            {"title" : "Bootstrap Starter Template", "link": "http://getbootstrap.com/examples/starter-template/"},
-            {"title" : "Bootstrap Docs", "link": "http://getbootstrap.com/"}
-          ]}
-        ]},
-      {title: "HTML", subTypes : [
-      {"title" : "Layout", "resources": [
-          {"title" : "Bootstrap Starter Template", "link": "http://getbootstrap.com/examples/starter-template/"},
-          {"title" : "Bootstrap Docs", "link": "http://getbootstrap.com/"}
-        ]}
-      ]}
-    ];
+        $.ajax({
+            url : "/resources/all",
+            success : function(resources) {
 
-    for (var i = 0; i < resources.length; i++) {
-      var li = $('<li class="list-group-item">' + resources[i].title + '</li>');
-      var subUl = $('<ul class="list-group hidden">');
-      li.append(subUl);
-      $("#resources").append(li);
-    };
+            }
+        });
 
+        var resources = [
+            {title: "JavaScript", "subTypes" : [
+                    {"title" : "DOM Manipulation", "resources": [
+                        {"title" : "jQuery", "link": "http://api.jquery.com/"},
+                        {"title" : "Bootstrap Starter Template", "link": "http://getbootstrap.com/examples/starter-template/"},
+                        {"title" : "Bootstrap Docs", "link": "http://getbootstrap.com/"}
+                    ]}
+            ]},
+            {title: "HTML", "subTypes" : [
+            {"title" : "Layout", "resources": [
+                    {"title" : "Bootstrap Starter Template", "link": "http://getbootstrap.com/examples/starter-template/"},
+                    {"title" : "Bootstrap Docs", "link": "http://getbootstrap.com/"}
+                ]}
+            ]}
+        ];
 
-    var links = [1,2,3,4];
-    for (var i = 0; i < links.length; i++) {
-      $("#list" + links[i]).on("click", function(e) {
-        $($(this).children()[0]).toggleClass("hidden");
-      });
-    }
-      
-    </script>
+        for (var i = 0; i < resources.length; i++) {
+            var li = $('<li class="list-group-item">' + resources[i].title + '</li>');
+            var subUl = $('<ul class="list-group hidden">');
+            for (var j = 0; j < resources[i].subTypes.length; j++) {
+                var subLi = $('<li class="list-group-item">' + resources[i].subTypes[j].title + '</li>');
+                var resourcesUl = $('<ul class="list-group hidden">');
+                for (var k = 0; k < resources[i].subTypes[j].resources.length; k++) {
+                    var resourceLi = $('<li class="list-group-item"><a href="' + resources[i].subTypes[j].resources[k].link +'">' + resources[i].subTypes[j].resources[k].title + '</a></li>');
+                    resourcesUl.append(resourceLi);
+                }
+                subLi.append(resourcesUl);
+                subUl.append(subLi);
+            }
+            li.append(subUl);
+            $("#resources").append(li);
+        }
 
-  </body>
+        $(".list-group-item").on("click", function(e) {
+            e.stopPropagation();
+            console.log(this);
+            $($(this).children()[0]).toggleClass("hidden");
+        });
+
+     
+        </script>
+
+    </body>
 </html>
