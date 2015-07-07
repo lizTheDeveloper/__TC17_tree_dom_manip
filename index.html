@@ -55,13 +55,44 @@
     <div class="container">
 
       <div class="starter-template">
-        <h1>Bootstrap starter template</h1>
+        <h1>Docs for great justice</h1>
         <ul class="list-group">
-          <li class="list-group-item">Cras justo odio</li>
-          <li class="list-group-item">Dapibus ac facilisis in</li>
-          <li class="list-group-item">Morbi leo risus</li>
-          <li class="list-group-item">Porta ac consectetur ac</li>
-          <li class="list-group-item">Vestibulum at eros</li>
+          <li class="list-group-item" id="list1">Cras justo odio
+          <ul class="list-group hidden" id="sublist1">
+            <li class="list-group-item">Yo</li>
+            <li class="list-group-item">What</li>
+            <li class="list-group-item">Up</li>
+            <li class="list-group-item">Dawg</li>
+            <li class="list-group-item">!</li>
+          </ul>
+          </li>
+          <li class="list-group-item" id="list2">Cras justo odio
+          <ul class="list-group hidden" id="sublist2">
+            <li class="list-group-item">Yo</li>
+            <li class="list-group-item">What</li>
+            <li class="list-group-item">Up</li>
+            <li class="list-group-item">Dawg</li>
+            <li class="list-group-item">!</li>
+          </ul>
+          </li>
+          <li class="list-group-item" id="list3">Cras justo odio
+          <ul class="list-group hidden" id="sublist3">
+            <li class="list-group-item">Yo</li>
+            <li class="list-group-item">What</li>
+            <li class="list-group-item">Up</li>
+            <li class="list-group-item">Dawg</li>
+            <li class="list-group-item">!</li>
+          </ul>
+          </li>
+          <li class="list-group-item" id="list4">Cras justo odio
+          <ul class="list-group hidden" id="sublist4">
+            <li class="list-group-item">Yo</li>
+            <li class="list-group-item">What</li>
+            <li class="list-group-item">Up</li>
+            <li class="list-group-item">Dawg</li>
+            <li class="list-group-item">!</li>
+          </ul>
+          </li>
         </ul>
       </div>
 
@@ -73,6 +104,35 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+
+    var resources = [
+      {title: "JavaScript", subTypes : [
+        {"title" : "DOM Manipulation", "resources": [
+            {"title" : "jQuery", "link": "http://api.jquery.com/"},
+            {"title" : "Bootstrap Starter Template", "link": "http://getbootstrap.com/examples/starter-template/"},
+            {"title" : "Bootstrap Docs", "link": "http://getbootstrap.com/"}
+          ]}
+        ]},
+      {title: "HTML", subTypes : [
+      {"title" : "Layout", "resources": [
+          {"title" : "Bootstrap Starter Template", "link": "http://getbootstrap.com/examples/starter-template/"},
+          {"title" : "Bootstrap Docs", "link": "http://getbootstrap.com/"}
+        ]}
+      ]}
+    ];
+
+
+
+    var links = [1,2,3,4];
+    for (var i = 0; i < links.length; i++) {
+      $("#list" + links[i]).on("click", function(e) {
+        $($(this).children()[0]).toggleClass("hidden");
+      });
+    }
+      
+    </script>
 
   </body>
 </html>
