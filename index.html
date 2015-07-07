@@ -96,6 +96,11 @@
         </ul>
       </div>
 
+      <ul class="list-group" id="resources">
+      </ul>
+
+
+
     </div><!-- /.container -->
 
 
@@ -123,6 +128,12 @@
       ]}
     ];
 
+    for (var i = 0; i < resources.length; i++) {
+      var li = $('<li class="list-group-item">' + resources[i].title + '</li>');
+      var subUl = $('<ul class="list-group hidden">');
+      li.append(subUl);
+      $("#resources").append(li);
+    };
 
 
     var links = [1,2,3,4];
